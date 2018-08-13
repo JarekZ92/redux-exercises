@@ -1,25 +1,34 @@
 
 const ADD = 'ADD'
 const SUB = 'SUB'
-const ADD10 = 'ADD10'
+const RESET = 'RESET'
+// const ADD10 = 'ADD10'
 
-export const add = () => (
+export const add = (number) => (
     {
-        type: 'ADD'
+        type: 'ADD',
+        number
     }
 )
 
-export const sub = () => (
+export const sub = (number) => (
     {
-        type: 'SUB'
+        type: 'SUB',
+        number
     }
 )
 
-export const add10 = () => (
+export const reset = (number) => (
     {
-        type: 'ADD10'
+        type: 'RESET'
     }
 )
+
+// export const add10 = () => (
+//     {
+//         type: 'ADD10'
+//     }
+// )
 
 const INITIAL_STATE = {
     counterValue: 99,
@@ -32,18 +41,23 @@ const reducer = (state = INITIAL_STATE, action) => {
         case ADD:
             return {
                 ...state,
-                counterValue: state.counterValue + 1
+                counterValue: state.counterValue + action.number
             }
         case SUB:
             return {
                 ...state,
-                counterValue: state.counterValue - 1
+                counterValue: state.counterValue - action.number
             }
-        case ADD10:
+            case RESET:
             return {
                 ...state,
-                counterValue: state.counterValue + 10
+                counterValue: 0
             }
+        // case ADD10:
+        //     return {
+        //         ...state,
+        //         counterValue: state.counterValue + 10
+        //     }
         default:
             return state
     }
