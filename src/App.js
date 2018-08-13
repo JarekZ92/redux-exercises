@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Counter from './Counter'
+import CounterButtons from './Counter/CounterButtons'
 
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Counter />
+        <CounterButtons />
       </div>
     );
   }
