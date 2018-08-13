@@ -1,6 +1,7 @@
 
 const ADD = 'ADD'
 const SUB = 'SUB'
+const ADD10 = 'ADD10'
 
 export const add = () => (
     {
@@ -11,6 +12,12 @@ export const add = () => (
 export const sub = () => (
     {
         type: 'SUB'
+    }
+)
+
+export const add10 = () => (
+    {
+        type: 'ADD10'
     }
 )
 
@@ -31,6 +38,11 @@ const reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 counterValue: state.counterValue - 1
+            }
+        case ADD10:
+            return {
+                ...state,
+                counterValue: state.counterValue + 10
             }
         default:
             return state
