@@ -6,21 +6,21 @@ const RESET = 'RESET'
 
 export const add = (number) => (
     {
-        type: 'ADD',
+        type: ADD,
         number
     }
 )
 
 export const sub = (number) => (
     {
-        type: 'SUB',
+        type: SUB,
         number
     }
 )
 
-export const reset = (number) => (
+export const reset = () => (
     {
-        type: 'RESET'
+        type: RESET
     }
 )
 

@@ -27,7 +27,7 @@ class CounterButtons extends React.Component {
         return (
             <div>
                 <input type="number" onChange={this.handleChange} />
-                <button onClick={this.props.reset}>Reset</button>
+                <button onClick={this.props.isaReset}>Reset</button>
                 <button onClick={() => this.props.isaAdd(this.state.inputValue)}>Add</button>
                 <button onClick={() => this.props.isaSub(this.state.inputValue)}>Sub</button>
                 {/* <button onClick={this.props.isaAdd10}>Add 10</button> */}
