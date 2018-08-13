@@ -5,6 +5,10 @@ class Counter extends React.Component {
         return (
             <div>
                 My awesome counter: {this.props.value}
+                <div>
+                    <button>Add</button>
+                    <button>Sub</button>
+                </div>
             </div>
         )
     }
