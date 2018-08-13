@@ -14,8 +14,6 @@ class CounterButtons extends React.Component {
             <div>
                 <button onClick={this.addHandler}>Add</button>
                 <button onClick={this.subHandler}>Sub</button>
-
-
             </div>
         )
     }
