@@ -12,8 +12,8 @@ class CounterButtons extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={() => this.dispatch(add)}>Add</button>
-                <button onClick={() => this.dispatch(sub)}>Sub</button>
+                <button onClick={() => this.dispatch(add())}>Add</button>
+                <button onClick={() => this.dispatch(sub())}>Sub</button>
             </div>
         )
     }
