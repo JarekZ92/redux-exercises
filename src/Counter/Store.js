@@ -48,7 +48,7 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 counterValue: state.counterValue - action.number
             }
-            case RESET:
+        case RESET:
             return {
                 ...state,
                 counterValue: 0
