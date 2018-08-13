@@ -1,11 +1,14 @@
 
-const add = () => (
+const ADD = 'ADD'
+const SUB = 'SUB'
+
+export const add = () => (
     {
         type: 'ADD'
     }
 )
 
-const sub = () => (
+export const sub = () => (
     {
         type: 'SUB'
     }
@@ -19,19 +22,17 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
     switch (action, type) {
-        case 'ADD':
+        case ADD:
             return {
-                counterValue: state.counterValue + 1,
-                open: false,
-                list: []
+                ...state,
+                counterValue: state.counterValue + 1
             }
-            return Object.assign(
-                {}, state, { counterValue: state.counterValue + 1 })
-            return { ...state, counterValue: state.counterValue + 1 }
-        case 'SUB':
-            return {}
+        case SUB:
+            return {
+                ...state,
+                counterValue: state.counterValue - 1
+            }
         default:
             return state
-
     }
 }
