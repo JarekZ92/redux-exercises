@@ -21,7 +21,7 @@ const INITIAL_STATE = {
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
-    switch (action, type) {
+    switch (action.type) {
         case ADD:
             return {
                 ...state,
@@ -36,3 +36,5 @@ const reducer = (state = INITIAL_STATE, action) => {
             return state
     }
 }
+
+export default reducer

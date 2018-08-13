@@ -18,4 +18,4 @@ class Counter extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mamDispatchToProps)(Counter)
+export default connect(mapStateToProps)(Counter)
